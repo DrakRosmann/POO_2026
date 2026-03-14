@@ -26,18 +26,13 @@ public class App {
         System.out.print("SEL: ");
         int sel = in.nextInt();
         switch (sel) {
-            case 1:
-                comprar(in,cliente);
-                break;
-            case 2:
-                System.out.printf("Você possui %d pontos.\n", cliente.getPontuacao());
-                break;
-            case 3:
+            case 1 -> comprar(in,cliente);
+            case 2 -> System.out.printf("Você possui %d pontos.\n", cliente.getPontuacao());
+            case 3 -> {
                 System.out.println("Saindo...");
                 return false;
-            default:
-                System.out.println("Você digitou errado.");
-                break;
+            }
+            default -> System.out.println("Você digitou errado.");
         }
         System.out.print("Realizar outra operação (1-SIM | 2-NÃO): ");
         if (in.nextInt() == 1) return true;
