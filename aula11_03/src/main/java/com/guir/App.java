@@ -61,7 +61,7 @@ public class App {
                 cliente.acumularPontos();
             }else{
                 cliente.obterDesconto();
-                System.out.printf("Valor total com desconto: R$ %.1f",cliente.getValorCompra());
+                System.out.printf("Valor total com desconto: R$ %.1f\n",cliente.getValorCompra());
             }
         }
     }
