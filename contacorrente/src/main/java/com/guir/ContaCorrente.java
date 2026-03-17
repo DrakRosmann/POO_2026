@@ -1,0 +1,60 @@
+package com.guir;
+
+public class ContaCorrente {
+    private int numeroConta;
+    private String nome;
+    private double saldo;
+    private boolean status;
+
+    public ContaCorrente(int numeroConta, String nome){
+        if(numeroConta<0) throw new IllegalArgumentException("Numero de conta fora de padrão.");
+        
+        this.numeroConta = numeroConta;
+        if(nome.length()<2) throw new IllegalArgumentException("Nome fora do padrão.");
+        
+        this.nome = nome;
+        saldo = 0;
+        status = true;
+    }
+
+    public int getNumeroConta() {
+        return numeroConta;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public void deposito(double valor){
+        if(valor < 0) throw new IllegalArgumentException("Valor incorreto.");
+        saldo += valor;
+    }
+
+    public void saque(double valor){
+        if(valor <= 0) throw new IllegalArgumentException("Valor incorreto.");
+        else if(valor > saldo) throw new IllegalArgumentException("Valor maior que saldo disponivel.");
+        saldo -= valor;
+    }
+
+    public void transf(ContaCorrente contaDest, double valor){
+        saque(valor);
+        contaDest.deposito(valor);
+    }
+
+    public void encerramento(){
+        if(saldo > 0) throw new IllegalArgumentException("Possui saldo pendente.");
+        status = false;
+    }
+}
