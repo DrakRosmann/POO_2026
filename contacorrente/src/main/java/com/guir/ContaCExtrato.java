@@ -3,6 +3,7 @@ package com.guir;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ContaCExtrato {
     private int numeroConta;
@@ -43,6 +44,15 @@ public class ContaCExtrato {
         this.status = status;
     }
 
+    public List<Extrato> getExtrato() {
+        return extrato;
+    }
+
+    public List<Extrato> extratoFiltro(LocalDateTime time){
+        List<Extrato> filtro = extrato.stream().filter(extrato -> extrato.getDataHora()==time).collect(Collectors.toList());
+        return filtro;
+    }
+
     public void generateExtrato(LocalDateTime data, String operacao, double valor){
         extrato.add(new Extrato(data,operacao,valor));
     }
@@ -69,4 +79,8 @@ public class ContaCExtrato {
         if(saldo > 0) throw new IllegalArgumentException("Possui saldo pendente.");
         status = false;
     }
+
+
+
+
 }
