@@ -43,7 +43,7 @@ public class Extrato {
         DateTimeFormatter formatoData = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter formatoHora = DateTimeFormatter.ofPattern("HH:mm");
 
-        return String.format("Data: %s | Hora: %s | Tipo: %-10s | Valor: R$ %.2f", 
+        return String.format("Data: %s | Hora: %s | Tipo: %-10s | Valor: R$ %.2f\n", 
             dataHora.format(formatoData), 
             dataHora.format(formatoHora), 
             operacao, 
