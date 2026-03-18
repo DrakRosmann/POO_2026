@@ -9,7 +9,7 @@ public class App {
         c2.deposito(1500);
     
         System.out.printf("Conta %d  | Saldo: %.1f\n", c2.getNumeroConta(),c2.getSaldo());
-        conta.transf(c2, 500);
+        conta.transf(c2, -500);
         System.out.printf("\n");
 
         System.out.printf("Conta %d  | Saldo: %.1f\n", conta.getNumeroConta(),conta.getSaldo());
