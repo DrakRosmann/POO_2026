@@ -1,6 +1,7 @@
 package com.guir;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Extrato {
     private LocalDateTime dataHora;
@@ -35,6 +36,18 @@ public class Extrato {
 
     public void setValor(double valor) {
         this.valor = valor;
+    }
+
+    @Override
+    public String toString() {
+        DateTimeFormatter formatoData = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter formatoHora = DateTimeFormatter.ofPattern("HH:mm");
+
+        return String.format("Data: %s | Hora: %s | Tipo: %-10s | Valor: R$ %.2f", 
+            dataHora.format(formatoData), 
+            dataHora.format(formatoHora), 
+            operacao, 
+            valor);
     }
     
     
