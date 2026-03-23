@@ -1,12 +1,16 @@
 @startuml
 class ContaCorrente{
-    - numero:int
-    - nome:String
-    - deposito(valor:double):boolean
-    - retirada(valor:double)
+    - numero : int
+    - nome : String
+    + deposito(valor:double) : boolean
+    + retirada(valor:double)
+
 }
 
 class agenciaBancaria{
+    - numero : int
+    - nome : String
+    - contas[] : ContaCorrente
 }
 agenciaBancaria "1"--> "*" ContaCorrente : possui
 @enduml
