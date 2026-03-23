@@ -1,3 +1,4 @@
+@startuml
 class ContaCorrente{
     - numero:int
     - nome:String
@@ -6,6 +7,6 @@ class ContaCorrente{
 }
 
 class agenciaBancaria{
-
 }
 agenciaBancaria "1"--> "*" ContaCorrente : possui
+@enduml
