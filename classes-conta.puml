@@ -1,0 +1,11 @@
+class ContaCorrente{
+    - numero:int
+    - nome:String
+    - deposito(valor:double):boolean
+    - retirada(valor:double)
+}
+
+class agenciaBancaria{
+
+}
+agenciaBancaria "1"--> "*" ContaCorrente : possui
