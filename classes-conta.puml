@@ -1,16 +1,25 @@
 @startuml
 class ContaCorrente{
-    - numero : int
+    - numeroConta : int
     - nome : String
-    + deposito(valor:double) : boolean
-    + retirada(valor:double)
-
+    - saldo : double
+    - status : boolean
+    + deposito(valor:double) : void
+    + saque(valor:double) : void
+    + transfere(contaDestino : ContaCorrente, valor : double) : void
+}
+class Extrato{
+    - dataHora : LocalDateTime
+    - operacao : String
+    - valor : double
 }
 
 class agenciaBancaria{
     - numero : int
     - nome : String
-    - contas[] : ContaCorrente
 }
-agenciaBancaria "1"--> "*" ContaCorrente : possui
+
+ContaCorrente "0" --> "*" Extrato
+ContaCorrente --> ContaCorrente : transfere
+agenciaBancaria "0"--> "*" ContaCorrente : gerencia
 @enduml
