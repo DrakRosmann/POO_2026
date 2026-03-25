@@ -1,0 +1,25 @@
+@startuml
+class Jogador{
+    - qntd : String 4
+}
+
+enum Naipes{
+    OUROS,ESPADAS,COPAS,PAUS
+}
+enum Valor{
+    AS,DOIS,TRES,QUATRO,CINCO,SEIS,SETE,OITO,NOVE,DEZ,VALETE,DAMA,REI
+}
+class Carta{
+   - Naipes naipes;
+   - Valor valor;
+
+class Baralho {
+
+}
+
+class Deck{
+ - soma : int 21
+}
+
+Carta --> Deck : conexao
+@enduml
