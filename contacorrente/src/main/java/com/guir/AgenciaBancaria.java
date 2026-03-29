@@ -6,7 +6,7 @@ import java.util.List;
 public class AgenciaBancaria {
     private int numero;
     private String nome;
-    private List<ContaCExtrato> contasBan;
+    private List<ContaCorrente> contasBan;
 
     public AgenciaBancaria(int numero, String nome) {
         this.numero = numero;
@@ -30,19 +30,19 @@ public class AgenciaBancaria {
         this.nome = nome;
     }
 
-    public List<ContaCExtrato> getContasBan() {
+    public List<ContaCorrente> getContasBan() {
         return contasBan;
     }
 
-    public void cadastrarConta(ContaCExtrato conta){
+    public void cadastrarConta(ContaCorrente conta){
         if(contasBan.contains(conta)){
             throw new IllegalArgumentException("Conta já cadastrada.");
         }
         contasBan.add(conta);
     }
 
-    public ContaCExtrato recuperarConta(int numero){
-        for (ContaCExtrato contas : contasBan){
+    public ContaCorrente recuperarConta(int numero){
+        for (ContaCorrente contas : contasBan){
             if (contas.getNumeroConta() == numero) return contas;
         }
         return null;
@@ -50,7 +50,7 @@ public class AgenciaBancaria {
 
     public void encerrarConta(int numero){
         try {
-            for (ContaCExtrato contas : contasBan) {
+            for (ContaCorrente contas : contasBan) {
                 if (contas.getNumeroConta() == numero) contas.encerramento();
             }
         }catch (IllegalArgumentException e){
