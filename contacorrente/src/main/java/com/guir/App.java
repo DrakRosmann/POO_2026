@@ -4,8 +4,8 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println("=== TESTANDO CRIAÇÃO DE CONTAS ===");
-        ContaCExtrato conta1 = new ContaCExtrato(1001, "Alice");
-        ContaCExtrato conta2 = new ContaCExtrato(1002, "Bob");
+        ContaCorrente conta1 = new ContaCorrente(1001, "Alice");
+        ContaCorrente conta2 = new ContaCorrente(1002, "Bob");
         System.out.println("Contas criadas: " + conta1.getNome() + " e " + conta2.getNome());
 
         System.out.println("\n=== TESTANDO OPERAÇÕES BÁSICAS ===");

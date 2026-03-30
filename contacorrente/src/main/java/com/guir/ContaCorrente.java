@@ -70,7 +70,7 @@ public class ContaCorrente {
         generateExtrato(LocalDateTime.now(), "Saque", valor);
     }
 
-    public void transf(ContaCExtrato contaDest, double valor){
+    public void transf(ContaCorrente contaDest, double valor){
         saque(valor);
         contaDest.deposito(valor);
     }
