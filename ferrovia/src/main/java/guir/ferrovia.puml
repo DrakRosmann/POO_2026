@@ -14,7 +14,7 @@ class TremComposicao{
 }
 
 class Locomotiva{
-    -quantVigao : int
+    -quantVagao : int
     -pesoMaximo : double
 }
 
