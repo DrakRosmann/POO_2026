@@ -1,5 +1,40 @@
 @startuml
-class Ferrovia{
+class Patio{
+    - trensCompo : List<TremComposicao>
 }
 
+class Garagem{
+    - locomotivas : List<Locomotiva>
+    - vagoes : List<Vagao>
+}
+
+class TremComposicao{
+    - locomotivas : List<Locomotiva>
+    - vagoes : List<Vagao>
+}
+
+class Locomotiva{
+    -quantVigao : int
+    -pesoMaximo : double
+}
+
+class Vagao{
+    tipo : tipoVagao
+}
+
+enum TipoVagao{
+    Aberto
+    Fechado
+    Refrigerado
+}
+
+
+'RELAÇÔES'
+Patio "1" --> "*" TremComposicao : estacionado
+Garagem "1"-->"*" Locomotiva : estacionado
+Garagem "1"-->"*" Vagao : estacionado
+
+Vagao --> TipoVagao : tipo
+TremComposicao "1"-->"*" Vagao
+TremComposicao "1"-->"1..3" Locomotiva
 @enduml
