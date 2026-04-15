@@ -5,7 +5,7 @@ import java.util.List;
 
 public class TremComposicao {
     private int id;
-    private List<Locomotiva> locomotivas;
+    private List<Locomotivas> locomotivas;
     private List<Vagao> vagoes;
 
     public TremComposicao (int id){
@@ -22,11 +22,11 @@ public class TremComposicao {
         this.id = id;
     }
 
-    public List<Locomotiva> getLocomotivas() {
+    public List<Locomotivas> getLocomotivas() {
         return locomotivas;
     }
 
-    public void setLocomotivas(List<Locomotiva> locomotivas) {
+    public void setLocomotivas(List<Locomotivas> locomotivas) {
         this.locomotivas = locomotivas;
     }
 
@@ -38,7 +38,7 @@ public class TremComposicao {
         this.vagoes = vagoes;
     }
 
-    public boolean adicionarLocomotiva(Locomotiva l){
+    public boolean adicionarLocomotiva(Locomotivas l){
 
         if(vagoes.size() > 0){
             System.out.println("Erro");
@@ -55,7 +55,7 @@ public class TremComposicao {
     public boolean adicionarVagao(Vagao v){
         int capacidadeTotalVagoes=0;
         double capacidadeTotalPeso=0;
-        for (Locomotiva l : locomotivas) {
+        for (Locomotivas l : locomotivas) {
             capacidadeTotalVagoes += l.getQuantVagao();
             capacidadeTotalPeso += l.getPesoMaximo();
         }
@@ -89,7 +89,7 @@ public class TremComposicao {
     public void listar(){
         System.out.println("Composição" + id);
         System.out.println("Locomotivas: ");
-        for (Locomotiva l : locomotivas){
+        for (Locomotivas l : locomotivas){
             System.out.println("ID: " + l.getId());
         }
         System.out.println("Vagões: ");

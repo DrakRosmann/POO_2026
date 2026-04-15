@@ -6,7 +6,7 @@ Projeto Maven criado automaticamente com Java 21 e JUnit 5.
 
 ```bash
 mvn compile
-mvn exec:java -Dexec.mainClass="com.guir.App"
+mvn exec:java -Dexec.mainClass="com.guir.AppHere"
 ```
 
 ## Como rodar testes

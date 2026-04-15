@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Garagem {
-    List<Locomotiva> locomotivasLivres;
+    List<Locomotivas> locomotivasLivres;
     List<Vagao> vagoesLivres;
 
     public Garagem() {
@@ -12,7 +12,7 @@ public class Garagem {
         vagoesLivres = new ArrayList<>();
     }
 
-    public List<Locomotiva> getLocomotivasLivres() {
+    public List<Locomotivas> getLocomotivasLivres() {
         return locomotivasLivres;
     }
 
@@ -20,7 +20,7 @@ public class Garagem {
         return vagoesLivres;
     }
 
-    public void adicionalLocomotiva(Locomotiva locomotiva) {
+    public void adicionalLocomotiva(Locomotivas locomotiva) {
         if(locomotiva != null) {
             locomotivasLivres.add(locomotiva);
         }
@@ -32,7 +32,7 @@ public class Garagem {
         }
     }
 
-    public void removerLocomotiva(Locomotiva l) {
+    public void removerLocomotiva(Locomotivas l) {
         locomotivasLivres.remove(l);
     }
 
@@ -40,8 +40,8 @@ public class Garagem {
         vagoesLivres.remove(v);
     }
 
-    public Locomotiva buscaLocomotiva(int id) {
-        for (Locomotiva l : locomotivasLivres){
+    public Locomotivas buscaLocomotiva(int id) {
+        for (Locomotivas l : locomotivasLivres){
             if (l.getId() == id){
                 return l;
             }
@@ -64,7 +64,7 @@ public class Garagem {
             return locomotivasLivres;
         }
         System.out.println("as locomotivas disponiveis:");
-        for (Locomotiva l : locomotivasLivres) {
+        for (Locomotivas l : locomotivasLivres) {
             System.out.println(l);
         }
 
