@@ -2,7 +2,7 @@ package guir;
 
 public class Vagaos extends CarroFerrovia {
     private boolean freio;
-
+    private int test;
     public Vagaos(int id, int capCarga, boolean freio) {
         super(id, capCarga);
         this.freio = freio;
