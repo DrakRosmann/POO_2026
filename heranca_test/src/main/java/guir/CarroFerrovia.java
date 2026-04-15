@@ -3,6 +3,7 @@ package guir;
 public class CarroFerrovia {
     private int id;
     private int capCarga;
+    private int test;
 
     public CarroFerrovia(int id, int capCarga) {
         this.id = id;
