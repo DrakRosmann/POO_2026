@@ -1,4 +1,4 @@
 package guir;
 
-public class PrimeiraClasse {
+public class PrimeiraClasse extends Passagem{
 }

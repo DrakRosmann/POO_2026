@@ -1,4 +1,4 @@
 package guir;
 
-public class Executiva {
+public class Executiva extends Passagem{
 }
