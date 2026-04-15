@@ -6,6 +6,6 @@ public abstract class Passagem {
     private double valor;
     private LocalDate data;
     private int numeroVoo;
-    private int quantBagagem;
+    private int quantBagagems;
     private Boolean acessoPrioritario;
 }
