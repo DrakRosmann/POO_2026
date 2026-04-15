@@ -7,4 +7,12 @@ public class Locomotivas extends CarroFerrovia{
         super(id, capCarga);
         this.nroMaxvagoes = nroMaxvagoes;
     }
+
+    public int getNroMaxvagoes() {
+        return nroMaxvagoes;
+    }
+
+    public void setNroMaxvagoes(int nroMaxvagoes) {
+        this.nroMaxvagoes = nroMaxvagoes;
+    }
 }

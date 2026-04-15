@@ -9,5 +9,19 @@ public class CarroFerrovia {
         this.capCarga = capCarga;
     }
 
+    public int getCapCarga() {
+        return capCarga;
+    }
 
+    public void setCapCarga(int capCarga) {
+        this.capCarga = capCarga;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }
